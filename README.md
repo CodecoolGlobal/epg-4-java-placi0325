@@ -14,7 +14,7 @@
     The webshop for exchanging preloved items - sprint 4.
     <br>
     <br>
-    <a href="https://github.com/CodecoolGlobal/epg-4-java-placi0325"><strong>Explore the docs :arrow_right:	</strong></a>
+    <a href=""><strong>Explore the docs :arrow_right:	</strong></a>
     <br />
     <br />
     <a href="https://docs.google.com/presentation/d/1iOCmSM92aCHHTpwdWYah2yIaMalNBtXnBk1am0Myygw/edit#slide=id.p">View Presentation of the project :clapper:	</a>
@@ -122,7 +122,7 @@ To run this project, you need to have the following:
    * DATABASE_USERNAME=_your username_<br>
    * DATABASE_PASSWORD=_your password_<br>
 
-:four: To start the fronend, you have to go into the frontend folder and run the following command in the terminal:
+:four: To start the frontend, you have to go into the frontend folder and run the following command in the terminal:
   ```sh
       npm start
    ```
