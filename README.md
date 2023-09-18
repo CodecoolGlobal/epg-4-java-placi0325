@@ -115,21 +115,25 @@ To run this project, you need to have the following:
    ```sh
    git clone https://github.com/CodecoolGlobal/epg-4-java-placi0325.git
    ```
-:two: Create a database in PostgreSQL named "preloved"
+:two: Create a database in PostgreSQL named for example: "preloved"
 
 :three: Open the project in IntelliJ, and set up these environment variables: <br>
    * DATABASE_NAME= preloved <br>
    * DATABASE_USERNAME=_your username_<br>
    * DATABASE_PASSWORD=_your password_<br>
 
-:four: To start the frontend, you have to go into the frontend folder and run the following command in the terminal:
+:four: To start the frontend separately (optional), you have to go into the frontend folder and run the following command in the terminal:
   ```sh
       npm start
    ```
 
 :five: To start the backend, run the application by the "Run" button in the top right corner or with Shift + F10 shortcut
 
-:six: If the frontend and the backend are running, the website will be available on
+:six: For reaching the website through the backend, use:
+  ```sh
+      http://localhost:8080/
+  ```
+:seven: If the frontend is running, the website will be available on
   ```sh
       http://localhost:3000/
   ```
