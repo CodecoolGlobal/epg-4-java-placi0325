@@ -10,7 +10,7 @@ export const ClientContextProvider = ( { children } ) => {
     }
 
     const checkAuthState = useCallback( () => {
-        const authtoken =localStorage.getItem("Token");
+        const authtoken = localStorage.getItem("Token");
         login(authtoken);
         //read token from local storage, send req to check auth, save to state
         //useEffect to make it authomatic
@@ -46,7 +46,7 @@ export const fetchWithToken = (method, token, url, body) => {
     }
 
     if (token !== null) {
-        headers["Authorization"] = "Bearer " + token;
+        headers["Authorization"] = token;
       }
   
     return fetch(url, fetchOptions);

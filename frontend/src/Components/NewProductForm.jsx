@@ -4,6 +4,12 @@ import { useState } from "react";
 const NewProductForm = ({ onCancel, onSave }) => {
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if (value === "none") {
+      alert("Please select a product type.");
+      return;
+    }
+    
     const formData = new FormData(e.target);
     const entries = [...formData.entries()];
 
@@ -16,7 +22,7 @@ const NewProductForm = ({ onCancel, onSave }) => {
     return onSave(product);
   };
 
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("none");
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -36,7 +42,6 @@ const NewProductForm = ({ onCancel, onSave }) => {
             </div>
 
             <div className="input-data textarea">
-              <label htmlFor="type" className="product-type-layer">Product type:</label>
               <select 
                   name="type" 
                   id="type" 
@@ -44,14 +49,14 @@ const NewProductForm = ({ onCancel, onSave }) => {
                   className="dropdown" 
                   value={value} 
                   onChange={handleChange}>
-                <option></option>
+                <option name="type" value="none" disabled selected>Select an Option</option>
                 <option name="type" value="furniture">Furniture</option>
                 <option name="type" value="clothing">Clothing</option>
                 <option name="type" value="home-equipment">Home equipment</option>
                 <option name="type" value="toys">Toys</option>
                 <option name="type" value="sport">Sport and recreation</option>
                 <option name="type" value="baby">Baby stuff</option>
-                <option name="type"value="other">Other</option>
+                <option name="type" value="other">Other</option>
               </select>
               
               <div className="underline"></div>
